@@ -1,25 +1,24 @@
-#I got a permission denied error
 
 #change workspace to directory containing raw data
-
+setwd('')
 ##############################
 #######   load the raw files   ###############
 #1) subject_test.txt
-test.sub<-read.table('~./subject_test.txt')
+test.sub<-read.table('./subject_test.txt')
 #2) X_test.txt
-test.X<-read.table('~./X_test.txt')
+test.X<-read.table('./X_test.txt')
 #3) y_test.txt
-test.y<-read.table('~./y_test.txt')
+test.y<-read.table('./y_test.txt')
 
 #4) subject_train.txt
-train.sub<-read.table('~/subject_train.txt')
+train.sub<-read.table('./subject_train.txt')
 #5) X_train.txt
-train.X<-read.table('~/X_train.txt')
+train.X<-read.table('./X_train.txt')
 #6) y_train.txt
-train.y<-read.table('~/y_train.txt')
+train.y<-read.table('./y_train.txt')
 
 #features info:
-features<-read.table('~/features.txt', sep=" ")
+features<-read.table('/features.txt', sep=" ")
 #the 'features' table states the names of the fields
 #in trains./test.x/y
 ###########  file loading ###########
@@ -68,7 +67,7 @@ stats.full<-rbind(stats.train,stats.test)
 #and replace them with descriptive terms 
 
 #read in activity labels
-activity<-read.table('~/activity_labels.txt')
+activity<-read.table('./activity_labels.txt')
 
 #the activity labels are in the y files , i.e.
 # y_test.txt and y_train... the "x" files contain data
